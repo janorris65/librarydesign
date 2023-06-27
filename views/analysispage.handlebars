@@ -1,0 +1,46 @@
+<div class="analysispage">
+  <div class="headliner">
+    <h3>Book: <span id="book">{{name}}</span></h3>
+    <h3>Dewey: <span id="dewey">{{num}}</span></h3>
+    <div>
+      <button class="button" id="getkeywords">Get Keywords</button>
+      <p id="keywords"></p>
+    </div></div>
+  <div class="slidecontainer">
+    Relative
+    <input
+      type="range"
+      min="-{{num}}"
+      max="{{numhigh}}"
+      class="slider"
+      id="relativeRange"
+      value="0"
+      step="1"
+    />
+    <h4>Relative Offset: <span id="relative"></span></h4>
+    <h5>Offset Result: <span id="offsetresult"></span></h5>
+    <button class="button" id="searchButtonOffset">Search by Offset</button>
+  </div>
+
+  <div class="slidecontainer">
+    Absolute
+    <input
+      type="range"
+      min="0"
+      max="1000"
+      class="slider"
+      id="absoluteRange"
+      value={{num}}
+      step="1"
+    />
+    <h4>Absolute Offset: <span id="absolute"></span></h4>
+    <button class="button" id="searchButtonAbsolute">Search by Absolute</button>
+  </div>
+
+  <div class="input">
+    <label class="bg-green-300" for="site-search">Custom Offset:</label>
+    <input id="site-search" type="search" />
+    <button class="button" id="searchButtonCustom">Search</button>
+  </div>
+</div>
+<script src="/analysis.js"></script>

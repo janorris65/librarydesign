@@ -1,0 +1,18 @@
+<div>
+  <p class="headliner">Search Term:
+    {{trialpup}}</p>
+  <section id="searchlist">
+    {{#each results as |result|}}
+      <div class="cardholder">
+        <a href="/search/{{result.name}}/{{result.num}}">
+          <button class="card">
+            <h3>{{result.name}}</h3>
+            <h4>{{result.auth}}</h4>
+            <h4>{{result.num}}</h4>
+          </button>
+
+        </a>
+      </div>
+    {{/each}}
+  </section>
+</div>
